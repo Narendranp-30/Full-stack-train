@@ -1,0 +1,54 @@
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px; /* Adjust padding to make the container smaller */
+  max-width: 800px; /* Set a maximum width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+  justify-content: flex-start; /* Start from left */
+}
+
+
+/* Product box styles */
+.product {
+  flex: 0 0 calc(25% - 20px); /* 25% width with a gap of 20px */
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product h2 {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.product p {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.product-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-buttons button {
+  padding: 4px 8px;
+  border: none;
+  background-color: #61dafb;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product-buttons button:hover {
+  background-color: #21a1f1;
+}
