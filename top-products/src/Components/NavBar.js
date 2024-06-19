@@ -1,15 +1,18 @@
-// src/Components/NavBar.js
+// Components/NavBar.js
 import React from 'react';
+import { Link } from 'react-router-dom'; // Use Link instead of a tags
+import './NavBar.css';
 
 const NavBar = () => {
   return (
-    <div className="navbar">
-      <select>
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
-      </select>
-    </div>
+    <nav className="navbar">
+      <ul className="nav-list">
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/products">Products</Link></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+      </ul>
+    </nav>
   );
 };
 

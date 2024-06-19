@@ -1,24 +1,27 @@
 /* NavBar.css */
+
 .navbar {
-    background-color: #333;
-    color: #fff;
-    height: 60px; /* Increase navbar height */
-    display: flex;
-    justify-content: center; /* Center nav links horizontally */
-  }
-  
-  .nav-links {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-  }
-  
-  .nav-links li {
-    margin-right: 10px;
-  }
-  
-  .nav-links a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
+  background-color: #333;
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-list li {
+  margin-right: 20px;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-list li a:hover {
+  background-color: #555;
+}

@@ -1,20 +1,26 @@
 // src/Components/Product.js
 
 import React from 'react';
-import './Product.css';
+import './Product.css'; // If you have specific styles for Product component
 
-const Product = ({ product, onBuy, onAddToCart }) => {
+const Product = ({ product, onBuy, onAddToCart, onToggleCompare, isSelected, isCompared }) => {
+  const { id, title, description, price, rating, image } = product;
+
   return (
-    <div className="product">
-      <img src={product.image} alt={product.title} />
-      <h2>{product.title}</h2>
-      <p>{product.description}</p>
-      <p>Price: ${product.price}</p>
-      {product.rating && <p>Rating: {product.rating}</p>} {/* Display the rating if available */}
-      <div className="product-buttons">
-        <button onClick={() => onBuy(product.id)}>Buy</button>
-        <button onClick={() => onAddToCart(product.id)}>Add to Cart</button>
-      </div>
+    <div className={`product ${isSelected ? 'selected' : ''} ${isCompared ? 'compared' : ''}`}>
+      <img src={image} alt={title} />
+      <h2>{title}</h2>
+      <p>{description}</p>
+      <p>Price: ${price}</p>
+      <p>Rating: {rating.rate} ({rating.count} reviews)</p>
+      {isSelected ? (
+        <button onClick={() => onToggleCompare(product)}>Remove from Compare</button>
+      ) : (
+        <button onClick={() => onToggleCompare(product)}>Add to Compare</button>
+      )}
+      {isCompared && <button onClick={() => onToggleCompare(product)}>Delete</button>}
+      <button onClick={() => onBuy(id)}>Buy</button>
+      <button onClick={() => onAddToCart(id)}>Add to Cart</button>
     </div>
   );
 };

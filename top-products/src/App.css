@@ -1,54 +1,129 @@
+/* src/App.css */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App-header {
+  padding: 20px;
+  background-color: #1d1515; /* Set the background color for the header */
+}
 
 .container {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Ensure the container is a column layout */
+  justify-content: flex-start; /* Align items at the top */
+  align-items: center;
+}
+
+.product-list {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 10px; /* Adjust padding to make the container smaller */
-  max-width: 800px; /* Set a maximum width for the container */
-  margin: 0 auto; /* Center the container horizontally */
-  justify-content: flex-start; /* Start from left */
+  justify-content: center;
 }
 
-
-/* Product box styles */
 .product {
-  flex: 0 0 calc(25% - 20px); /* 25% width with a gap of 20px */
-  border: 1px solid #ccc;
-  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  width: 200px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  text-align: left;
 }
 
 .product img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
 }
 
 .product h2 {
-  font-size: 1rem;
-  margin: 5px 0;
+  font-size: 1.25em;
+  margin: 0 0 10px;
 }
 
 .product p {
-  font-size: 0.8rem;
-  color: #555;
-  margin-bottom: 5px;
+  margin: 0 0 10px;
 }
 
-.product-buttons {
-  display: flex;
-  justify-content: space-between;
+.product button {
+  margin-right: 10px;
 }
 
-.product-buttons button {
-  padding: 4px 8px;
-  border: none;
-  background-color: #61dafb;
+.product.selected button {
+  background-color: #dc3545;
   color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
 }
 
-.product-buttons button:hover {
-  background-color: #21a1f1;
+.comparison {
+  margin: 20px 0; /* Adjust margin for spacing */
+  width: 100%; /* Ensure comparison takes full width */
+}
+
+.comparison-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.comparison-product {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.comparison-product img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.comparison-product h3 {
+  font-size: 1.25em;
+  margin: 0 0 10px;
+}
+
+.comparison-product p {
+  margin: 0 0 10px;
+}
+/* src/App.css */
+
+/* Styling for regular containers */
+.product {
+  background-color: #f7f7f7; /* Mild background color */
+  transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+/* Hover effect for regular containers */
+.product:hover {
+  background-color: #ffcccc; /* Pink color on hover */
+}
+
+/* Additional styling for comparison products if needed */
+.comparison-product {
+  background-color: #fff; /* Background color for comparison products */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow change */
+}
+
+/* Apply shadow on hover for comparison products */
+.comparison-product:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
