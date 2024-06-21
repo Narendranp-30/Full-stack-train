@@ -1,0 +1,107 @@
+/* Components/NavBar/NavBar.css */
+.navbar-custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 150px 10px 150px; /* Your custom background color */
+}
+
+.logo {
+  color: #000000;
+  text-decoration: none;
+  font-size: 24px;
+  padding-right: 450px; /* Adjust as needed */
+}
+
+.nav-link {
+   list-style-type: none;
+  padding: 10px 200px 30px 200px;
+  margin: 0;
+  display: flex;/* Your link transition */
+}
+
+.nav-link:hover {
+  background-color: #e87a7a; /* Your link hover background color */
+}
+/* Components/NavBar/NavBar.css */
+.navbar {
+  background-color: #ffffff;
+  position: relative;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 150px 10px 160px;
+  
+}
+
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  padding-right: 150px;
+  
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 10px 200px 30px 200px;
+  margin: 0;
+  display: flex;
+  
+}
+
+
+.nav-list li {
+  margin-right: 20px;
+  
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  
+}
+
+.nav-list li a:hover {
+  background-color: #555;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-list.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

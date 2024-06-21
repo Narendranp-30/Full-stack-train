@@ -1,4 +1,3 @@
-// src/Components/Product.js
 
 import React from 'react';
 import './Product.css'; // If you have specific styles for Product component
@@ -7,7 +6,9 @@ const Product = ({ product, onBuy, onAddToCart, onToggleCompare, isSelected, isC
   const { id, title, description, price, rating, image } = product;
 
   return (
+    
     <div className={`product ${isSelected ? 'selected' : ''} ${isCompared ? 'compared' : ''}`}>
+      
       <img src={image} alt={title} />
       <h2>{title}</h2>
       <p>{description}</p>

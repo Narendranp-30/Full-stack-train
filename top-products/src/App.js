@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-import NavBar from './Components/NavBar'; // Import NavBar component
-import Home from './Components/Home'; // Import Home component
-import ProductList from './Components/ProductList'; // Import ProductList component
+import NavBar from './Components/NavBar/NavBar';
+import Home from './Components/Home/Home';
+import ProductList from './Components/Products/ProductList';
+import AboutUs from './Components/AboutUs/AboutUs';
 import './App.css';
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
         setLoading(false);
       })
       .catch(error => {
+        console.error('Error fetching products:', error);
         setError(error);
         setLoading(false);
       });
@@ -100,7 +102,6 @@ const App = () => {
     if (location.pathname === '/products') {
       return (
         <>
-          <h1>Top Products</h1>
           <div className="sorting">
             <button onClick={() => setSortCriteria('rating')}>Sort by Rating</button>
             <button onClick={() => setSortCriteria('price')}>Sort by Price</button>
@@ -127,7 +128,7 @@ const App = () => {
         <div className="container">
           {showComparison && renderComparison()}
           <Routes>
-            <Route path="/" element={<Home />} /> {/* Home route */}
+            <Route path="/" element={<Home />} />
             <Route
               path="/products"
               element={
@@ -141,6 +142,7 @@ const App = () => {
                 />
               }
             />
+            <Route path="/about-us" element={<AboutUs />} />
           </Routes>
         </div>
       </div>
