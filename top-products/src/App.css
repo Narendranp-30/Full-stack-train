@@ -127,3 +127,33 @@
 .comparison-product:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+/* App.css or a global styles file */
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.container {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.sorting {
+  margin-bottom: 20px;
+}
+
+.sorting button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sorting button:hover {
+  background-color: #0056b3;
+}

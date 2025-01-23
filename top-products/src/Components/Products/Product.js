@@ -1,19 +1,18 @@
-
 import React from 'react';
-import './Product.css'; // If you have specific styles for Product component
+import './Product.css';
 
 const Product = ({ product, onBuy, onAddToCart, onToggleCompare, isSelected, isCompared }) => {
   const { id, title, description, price, rating, image } = product;
 
   return (
-    
     <div className={`product ${isSelected ? 'selected' : ''} ${isCompared ? 'compared' : ''}`}>
-      
       <img src={image} alt={title} />
       <h2>{title}</h2>
       <p>{description}</p>
       <p>Price: ${price}</p>
-      <p>Rating: {rating.rate} ({rating.count} reviews)</p>
+      {rating && ( // Check if rating exists before rendering
+        <p>Rating: {rating.rate} ({rating.count} reviews)</p>
+      )}
       {isSelected ? (
         <button onClick={() => onToggleCompare(product)}>Remove from Compare</button>
       ) : (

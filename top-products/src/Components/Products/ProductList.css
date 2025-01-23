@@ -1,0 +1,17 @@
+/* ProductList.css */
+.product-list-container {
+    padding: 20px;
+  }
+  
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .product-list p {
+    font-size: 18px;
+    color: #666;
+  }
+  

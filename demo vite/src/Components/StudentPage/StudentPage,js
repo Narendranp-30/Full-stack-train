@@ -1,0 +1,53 @@
+// Components/StudentPage/StudentPage.js
+import React, { useState } from 'react';
+import './StudentPage.css';
+
+const StudentPage = ({ formSubmissions }) => {
+  const [searchRollNumber, setSearchRollNumber] = useState('');
+  const [searchResult, setSearchResult] = useState(null);
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    const result = formSubmissions.find(student => student.rollNumber === searchRollNumber);
+    setSearchResult(result || 'No student found with this roll number');
+  };
+
+  return (
+    <div className="student-page">
+      <h2>Search Student Marks</h2>
+      <form onSubmit={handleSearch}>
+        <label>
+          Roll Number:
+          <input type="text" value={searchRollNumber} onChange={(e) => setSearchRollNumber(e.target.value)} required />
+        </label>
+        <button type="submit">Search</button>
+      </form>
+      {searchResult && (
+        <div className="search-result">
+          {typeof searchResult === 'string' ? (
+            <p>{searchResult}</p>
+          ) : (
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Roll Number</th>
+                  <th>Marks</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{searchResult.name}</td>
+                  <td>{searchResult.rollNumber}</td>
+                  <td>{searchResult.marks}</td>
+                </tr>
+              </tbody>
+            </table>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default StudentPage;

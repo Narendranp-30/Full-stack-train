@@ -1,3 +1,4 @@
+// App.js
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import NavBar from './Components/NavBar/NavBar';
@@ -11,12 +12,13 @@ const App = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [sortCriteria, setSortCriteria] = useState('rating');
+  const [searchTerm, setSearchTerm] = useState('');
   const [selectedProducts, setSelectedProducts] = useState([]);
   const [comparedProducts, setComparedProducts] = useState([]);
   const [showComparison, setShowComparison] = useState(false);
 
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products')
+    fetch('https://dummyjson.com/products')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -24,7 +26,7 @@ const App = () => {
         return response.json();
       })
       .then(data => {
-        sortProducts(data, sortCriteria);
+        sortProducts(data.products, sortCriteria);
         setLoading(false);
       })
       .catch(error => {
@@ -35,9 +37,9 @@ const App = () => {
   }, [sortCriteria]);
 
   const sortProducts = (products, criteria) => {
-    const sortedProducts = products.sort((a, b) => {
+    const sortedProducts = [...products].sort((a, b) => {
       if (criteria === 'rating') {
-        return b.rating.rate - a.rating.rate;
+        return b.rating - a.rating;
       } else if (criteria === 'price') {
         return a.price - b.price;
       }
@@ -45,6 +47,14 @@ const App = () => {
     });
     setProducts(sortedProducts);
   };
+
+  const handleSearchChange = (term) => {
+    setSearchTerm(term);
+  };
+
+  const filteredProducts = products.filter(product =>
+    product.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   const handleBuy = (id) => {
     alert(`Product ${id} bought!`);
@@ -77,10 +87,10 @@ const App = () => {
         <div className="comparison-list">
           {comparedProducts.map(product => (
             <div key={product.id} className="comparison-product">
-              <img src={product.image} alt={product.title} />
+              <img src={product.thumbnail} alt={product.title} />
               <h3>{product.title}</h3>
               <p>Price: ${product.price}</p>
-              <p>Rating: {product.rating.rate} ({product.rating.count} reviews)</p>
+              <p>Rating: {product.rating} ({product.reviews} reviews)</p>
               <button onClick={() => handleDeleteComparisonProduct(product.id)}>Delete</button>
             </div>
           ))}
@@ -133,7 +143,9 @@ const App = () => {
               path="/products"
               element={
                 <ProductList
-                  products={products}
+                  products={filteredProducts}
+                  searchTerm={searchTerm}
+                  onSearchChange={handleSearchChange}
                   onBuy={handleBuy}
                   onAddToCart={handleAddToCart}
                   onToggleCompare={handleToggleCompare}

@@ -1,0 +1,117 @@
+/* General Container Styling */
+.section {
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+/* First Section */
+.top-section {
+  background: linear-gradient(to bottom, #e6f7ff, #b3e0ff);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-section-content {
+  max-width: 50%;
+}
+
+.top-section img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.top-section h4 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.top-section p {
+  margin: 20px 0;
+  font-size: 1.1rem;
+}
+
+.top-section button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.top-section button:hover {
+  background-color: #0056b3;
+}
+
+/* Features Section */
+.features-grid {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+}
+
+.feature-item {
+  text-align: center;
+}
+
+.feature-item img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.feature-item h6 {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.feature-item p {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  background: #f9f9f9;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 10px;
+}
+
+.why-choose-us h5 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.why-choose-us p {
+  color: gray;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+.why-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.why-item {
+  text-align: center;
+  flex: 1;
+  margin: 0 10px;
+}
+
+.why-item img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.why-item h6 {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.why-item p {
+  font-size: 0.9rem;
+  color: gray;
+}

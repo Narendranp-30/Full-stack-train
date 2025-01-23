@@ -1,0 +1,101 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #ef4040; /* Dark background for the entire page */
+    color: #fff; /* Light text color for better readability */
+}
+
+/* General container styling */
+.container {
+    max-width: 1200px;
+    margin: 20px auto; /* Centered with vertical margin */
+    padding: 30px;
+    background-color: #e30d0d; /* Dark background for the container */
+    box-shadow: 0 0 10px rgba(246, 4, 12, 0.915); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+}
+
+h2 {
+    font-size: 32px; /* Larger font size */
+    margin: 20px 0;
+    text-align: center;
+    color: #1abc9c; /* Lighter heading color */
+}
+
+h2 small {
+    font-size: 0.8em; /* Larger small text */
+    color: #ecf0f1; /* Light text color */
+}
+
+div {
+    text-align: center;
+}
+
+/* Navigation bar styling */
+.pg {
+    margin: 10px;
+    padding: 10px 30px; /* Increased padding for a richer look */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff19af; /* Darker grey background */
+    border-radius: 20px;
+    color: #fff; /* White text color for contrast */
+    box-shadow: 0 4px 8px rgba(218, 15, 15, 0.899); /* Add subtle shadow for depth */
+}
+
+.pg1 {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: #fff; /* White text color for links */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+a:hover {
+    color: #3aff03; /* Change link color on hover */
+}
+
+ul {
+    list-style: none;
+    padding: 0; /* Remove default padding */
+}
+
+/* Dark mode styling */
+.Dark .pg {
+    background-color: #ff426b; /* Darker background for dark mode */
+    color: #fff; /* White text color for contrast */
+}
+
+.Dark a {
+    color: #fff; /* White text color for links */
+}
+
+/* Active state styling */
+.on {
+    display: flex;
+    background-color: #29b929; /* Blue background for active state */
+    color: #fff; /* White text color for contrast */
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+.box {
+    height: 12px; /* Increased size for better visibility */
+    width: 12px;
+    background-color: #ff0fbb; /* Bright blue color */
+    margin: 0 5px; /* Add margin for spacing */
+    border-radius: 50%; /* Make it a circle */
+}
+
+.title {
+    font-weight: bold;
+    font-style: italic; /* Change to italic for a richer look */
+    font-size: 28px; /* Increased font size */
+    color: #ecf0f1; /* Light grey color for title */
+    margin: 0 10px; /* Add margin for spacing */
+}

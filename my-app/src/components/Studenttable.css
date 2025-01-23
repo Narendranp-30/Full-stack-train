@@ -1,0 +1,129 @@
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #e0e0e0; /* Slightly darker light background for the entire page */
+  color: #444; /* Slightly darker text color for better readability */
+}
+
+.container {
+  max-width: 1000px;
+  margin: 20px auto; /* Add vertical margin for spacing */
+  padding: 20px;
+  background-color: #ffffff; /* White background for the container */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow for depth */
+  border-radius: 12px; /* More rounded corners */
+}
+
+h2 {
+  font-size: 32px; /* Larger font size */
+  margin: 20px 0;
+  text-align: center;
+  color: #2c3e50; /* Darker heading color */
+}
+
+h2 small {
+  font-size: 0.6em; /* Slightly larger small text */
+}
+
+div {
+  text-align: center;
+}
+
+.responsive-table {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+.responsive-table li {
+  border-radius: 12px; /* More rounded corners */
+  padding: 20px 25px; /* Adjust padding for better spacing */
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically center the content */
+  margin-bottom: 15px; /* Less margin between rows */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.table-header {
+  background-color: #adff13; /* Brighter header background */
+  color: #ffffff; /* Light text color for header */
+  font-weight: bold;
+  font-size: 16px; /* Slightly larger font size */
+  text-transform: uppercase;
+  letter-spacing: 0.05em; /* Slightly larger letter spacing */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow for header */
+}
+
+.table-row {
+  background-color: #ffffff; /* White background for rows */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow for rows */
+  text-align: center;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.table-row:hover {
+  background-color: #f0f0f0; /* Slightly darker background on hover */
+}
+
+@media all and (max-width: 767px) {
+  .table-header {
+    display: none;
+  }
+
+  .responsive-table li {
+    display: block;
+    text-align: left;
+  }
+}
+
+/* Top Navigation */
+.topnav {
+  background-color: #34495e; /* Dark blue background */
+  overflow: hidden;
+  padding: 15px; /* Add some padding */
+  border-radius: 12px; /* More rounded corners */
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Align items vertically */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow for depth */
+}
+
+.topnav .title {
+  font-size: 26px; /* Larger size for the title */
+  color: #ecf0f1; /* Light text color */
+  font-weight: bold; /* Bold text */
+}
+
+.topnav .search-container {
+  display: flex; /* Use flexbox for alignment */
+}
+
+.topnav input[type=text] {
+  padding: 10px; /* Adjust padding for better spacing */
+  font-size: 17px;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* More rounded corners */
+  background-color: #ffffff; /* White background */
+  color: #34495e; /* Darker text color */
+  margin-right: 10px; /* Margin between input and button */
+  transition: border-color 0.3s ease; /* Smooth transition for focus effect */
+}
+
+.topnav input[type=text]:focus {
+  border-color: #ffe101; /* Change border color on focus */
+}
+
+.topnav .search-container button {
+  padding: 10px 15px; /* Adjust padding for better spacing */
+  background: #ff17c1; /* Vibrant green background */
+  color: white; /* White text */
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px; /* More rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.topnav .search-container button:hover {
+  background: #c919ff; /* Slightly darker green on hover */
+}

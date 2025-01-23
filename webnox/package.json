@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    // ... existing code ...
+  },
+  "proxy": "http://localhost:3000"
+  // ... existing code ...
+} 

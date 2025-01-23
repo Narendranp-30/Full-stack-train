@@ -1,0 +1,18 @@
+.light header {
+  background-color: black;
+  color: #fff;
+}
+.light header a {
+  color: #fff;
+}
+.light {
+  background-color: #2d2d2d;
+  color: #fff;
+}
+.light button{
+  background-color: #fff;
+  color: black;
+}
+.light .product-card{
+  background-color: #000000;
+}

@@ -1,0 +1,27 @@
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f1f1f1;
+  padding:20px;
+}
+.logo{
+  font-size:1.5rem;
+}
+.items{
+  display: flex;
+  gap: 60px;
+}
+a{
+  font-size:1.3rem;
+  /* margin-right: 60px; */
+  text-decoration: none;
+  color: #000;
+}
+button{
+  /* border-radius: 7px; */
+  width: 60px;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+}
